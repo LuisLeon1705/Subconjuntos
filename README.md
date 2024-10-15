@@ -1,50 +1,75 @@
-# React + TypeScript + Vite
+# SubconjuntosLogica
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SubconjuntosLogica es una aplicación de escritorio diseñada para visualizar subconjuntos y diagramas de Venn de manera interactiva. Utiliza tecnologías modernas como React, Electron y Vite para ofrecer una experiencia de usuario fluida y eficiente.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esta aplicación permite a los usuarios crear, editar y visualizar subconjuntos y sus relaciones a través de diagramas de Venn. Es ideal para estudiantes, educadores y cualquier persona interesada en la teoría de conjuntos.
 
-## Expanding the ESLint configuration
+## Características
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Visualización interactiva de subconjuntos.
+- Diagramas de Venn que representan relaciones entre conjuntos.
+- Interfaz de usuario intuitiva y amigable.
+- Soporte para múltiples conjuntos.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Para instalar y ejecutar la aplicación en tu máquina local, sigue estos pasos:
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/SubconjuntosLogica.git
+   cd SubconjuntosLogica
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Ejecuta el entorno de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+Esto abrirá la aplicación en modo de desarrollo y podrás acceder a ella en `http://localhost:5173`.
+
+## Construcción
+
+Para crear una versión de producción de la aplicación, utiliza el siguiente comando:
+
+```bash
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Esto generará una versión optimizada en la carpeta `dist`, lista para ser distribuida.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Contribuciones
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Las contribuciones son bienvenidas. Si deseas mejorar la aplicación, por favor sigue estos pasos:
+
+1. Haz un fork del proyecto.
+2. Crea una nueva rama para tu función o corrección de errores (`git checkout -b feature/nueva-funcion`).
+3. Realiza tus cambios y haz un commit (`git commit -m 'Agregando nueva función'`).
+4. Envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+## Tecnologías utilizadas
+
+- [React](https://reactjs.org/)
+- [Electron](https://www.electronjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Mantine](https://mantine.dev/)
+- [Chart.js](https://www.chartjs.org/)
+
+## Autor
+
+Luis-Leon
+
+---
+
+¡Disfruta utilizando SubconjuntosLogica!
