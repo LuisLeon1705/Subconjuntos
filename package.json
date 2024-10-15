@@ -9,7 +9,8 @@
     "dev": "concurrently \"vite\" \"npm run electron:dev\"",
     "electron:dev": "wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .",
     "build": "vite build && npm run electron:build",
-    "electron:build": "cross-env NODE_ENV=production electron-builder"
+    "electron:build": "cross-env NODE_ENV=production electron-builder",
+    "vite:buikd": "vite build"
   },
   "build": {
     "appId": "com.tuapp.id",
