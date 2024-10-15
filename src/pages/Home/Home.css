@@ -1,0 +1,19 @@
+.fade-container {
+  position: relative;
+}
+
+.fade-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fade-element.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease-in-out, visibility 0s 0s;
+}

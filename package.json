@@ -1,0 +1,77 @@
+{
+  "name": "electron-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "main.js",
+  "author": "Luis-Leon",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"npm run electron:dev\"",
+    "electron:dev": "wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .",
+    "build": "vite build && npm run electron:build",
+    "electron:build": "cross-env NODE_ENV=production electron-builder"
+  },
+  "build": {
+    "appId": "com.tuapp.id",
+    "productName": "SubconjuntosLogica",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@mantine/core": "^7.13.2",
+    "@mantine/dates": "^7.13.2",
+    "@mantine/form": "^7.13.2",
+    "@mantine/hooks": "^7.13.2",
+    "@mantine/modals": "^7.13.2",
+    "@phosphor-icons/react": "^2.1.7",
+    "@tabler/icons-react": "^3.19.0",
+    "@upsetjs/react": "^1.11.0",
+    "@upsetjs/venn.js": "^1.4.2",
+    "chart.js": "^4.4.4",
+    "chartjs-chart-venn": "^4.3.2",
+    "dayjs": "^1.11.13",
+    "mantine-react-table": "^2.0.0-beta.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/lodash": "^4.17.10",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.8",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.47",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.7.0",
+    "vite": "^5.4.8",
+    "wait-on": "^8.0.1"
+  }
+}
